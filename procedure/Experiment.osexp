@@ -44,39 +44,189 @@ define loop block_1
 	set offset no
 	set item block1_sequence
 	set description "Repeatedly runs another item"
-	set cycles 6
-	set column_order "stimulus;truth;SOAcondition;operation;size"
+	set cycles 36
+	set column_order "operand1;operation;operand2;result;problemType"
 	set break_if never
-	setcycle 0 stimulus "2 + 3"
-	setcycle 0 SOAcondition "neutral"
-	setcycle 0 operation "add"
-	setcycle 0 truth "false"
-	setcycle 0 size "small"
-	setcycle 1 stimulus "3 + 4"
-	setcycle 1 SOAcondition "neutral"
-	setcycle 1 operation "add"
-	setcycle 1 truth "false"
-	setcycle 1 size "small"
-	setcycle 2 stimulus "3 + 5"
-	setcycle 2 SOAcondition "neutral"
-	setcycle 2 operation "add"
-	setcycle 2 truth "true"
-	setcycle 2 size "small"
-	setcycle 3 stimulus "4 + 2"
-	setcycle 3 SOAcondition "neutral"
-	setcycle 3 operation "add"
-	setcycle 3 truth "true"
-	setcycle 3 size "small"
-	setcycle 4 stimulus "5 + 6"
-	setcycle 4 SOAcondition "neutral"
-	setcycle 4 operation "mult"
-	setcycle 4 truth "false"
-	setcycle 4 size "small"
-	setcycle 5 stimulus "1 + 5"
-	setcycle 5 SOAcondition "neutral"
-	setcycle 5 operation "mult"
-	setcycle 5 truth "false"
-	setcycle 5 size "small"
+	setcycle 0 operation "+"
+	setcycle 0 operand1 "2"
+	setcycle 0 result "2"
+	setcycle 0 problemType "target"
+	setcycle 0 operand2 "0"
+	setcycle 1 operation "-"
+	setcycle 1 operand1 "2"
+	setcycle 1 result "2"
+	setcycle 1 problemType "target"
+	setcycle 1 operand2 "0"
+	setcycle 2 operation "+"
+	setcycle 2 operand1 "3"
+	setcycle 2 result "3"
+	setcycle 2 problemType "target"
+	setcycle 2 operand2 "0"
+	setcycle 3 operation "-"
+	setcycle 3 operand1 "3"
+	setcycle 3 result "3"
+	setcycle 3 problemType "target"
+	setcycle 3 operand2 "0"
+	setcycle 4 operation "+"
+	setcycle 4 operand1 "4"
+	setcycle 4 result "4"
+	setcycle 4 problemType "target"
+	setcycle 4 operand2 "0"
+	setcycle 5 operation "+"
+	setcycle 5 operand1 "3"
+	setcycle 5 result "4"
+	setcycle 5 problemType "target"
+	setcycle 5 operand2 "1"
+	setcycle 6 operation "+"
+	setcycle 6 operand1 "2"
+	setcycle 6 result "4"
+	setcycle 6 problemType "target"
+	setcycle 6 operand2 "2"
+	setcycle 7 operation "-"
+	setcycle 7 operand1 "4"
+	setcycle 7 result "4"
+	setcycle 7 problemType "target"
+	setcycle 7 operand2 "0"
+	setcycle 8 operation "-"
+	setcycle 8 operand1 "5"
+	setcycle 8 result "4"
+	setcycle 8 problemType "target"
+	setcycle 8 operand2 "1"
+	setcycle 9 operation "-"
+	setcycle 9 operand1 "6"
+	setcycle 9 result "4"
+	setcycle 9 problemType "target"
+	setcycle 9 operand2 "2"
+	setcycle 10 operation "+"
+	setcycle 10 operand1 "6"
+	setcycle 10 result "6"
+	setcycle 10 problemType "target"
+	setcycle 10 operand2 "0"
+	setcycle 11 operation "+"
+	setcycle 11 operand1 "5"
+	setcycle 11 result "6"
+	setcycle 11 problemType "target"
+	setcycle 11 operand2 "1"
+	setcycle 12 operation "+"
+	setcycle 12 operand1 "4"
+	setcycle 12 result "6"
+	setcycle 12 problemType "target"
+	setcycle 12 operand2 "2"
+	setcycle 13 operation "-"
+	setcycle 13 operand1 "6"
+	setcycle 13 result "6"
+	setcycle 13 problemType "target"
+	setcycle 13 operand2 "0"
+	setcycle 14 operation "-"
+	setcycle 14 operand1 "7"
+	setcycle 14 result "6"
+	setcycle 14 problemType "target"
+	setcycle 14 operand2 "1"
+	setcycle 15 operation "-"
+	setcycle 15 operand1 "8"
+	setcycle 15 result "6"
+	setcycle 15 problemType "target"
+	setcycle 15 operand2 "2"
+	setcycle 16 operation "+"
+	setcycle 16 operand1 "7"
+	setcycle 16 result "7"
+	setcycle 16 problemType "target"
+	setcycle 16 operand2 "0"
+	setcycle 17 operation "-"
+	setcycle 17 operand1 "7"
+	setcycle 17 result "7"
+	setcycle 17 problemType "target"
+	setcycle 17 operand2 "0"
+	setcycle 18 operation "+"
+	setcycle 18 operand1 "8"
+	setcycle 18 result "8"
+	setcycle 18 problemType "target"
+	setcycle 18 operand2 "0"
+	setcycle 19 operation "-"
+	setcycle 19 operand1 "8"
+	setcycle 19 result "8"
+	setcycle 19 problemType "target"
+	setcycle 19 operand2 "0"
+	setcycle 20 operation "-"
+	setcycle 20 operand1 "5"
+	setcycle 20 result "1"
+	setcycle 20 problemType "filler"
+	setcycle 20 operand2 "4"
+	setcycle 21 operation "-"
+	setcycle 21 operand1 "6"
+	setcycle 21 result "1"
+	setcycle 21 problemType "filler"
+	setcycle 21 operand2 "5"
+	setcycle 22 operation "-"
+	setcycle 22 operand1 "6"
+	setcycle 22 result "2"
+	setcycle 22 problemType "filler"
+	setcycle 22 operand2 "4"
+	setcycle 23 operation "-"
+	setcycle 23 operand1 "7"
+	setcycle 23 result "2"
+	setcycle 23 problemType "filler"
+	setcycle 23 operand2 "5"
+	setcycle 24 operation "-"
+	setcycle 24 operand1 "7"
+	setcycle 24 result "3"
+	setcycle 24 problemType "filler"
+	setcycle 24 operand2 "4"
+	setcycle 25 operation "-"
+	setcycle 25 operand1 "8"
+	setcycle 25 result "3"
+	setcycle 25 problemType "filler"
+	setcycle 25 operand2 "5"
+	setcycle 26 operation "-"
+	setcycle 26 operand1 "7"
+	setcycle 26 result "4"
+	setcycle 26 problemType "filler"
+	setcycle 26 operand2 "3"
+	setcycle 27 operation "-"
+	setcycle 27 operand1 "8"
+	setcycle 27 result "4"
+	setcycle 27 problemType "filler"
+	setcycle 27 operand2 "4"
+	setcycle 28 operation "+"
+	setcycle 28 operand1 "3"
+	setcycle 28 result "6"
+	setcycle 28 problemType "filler"
+	setcycle 28 operand2 "3"
+	setcycle 29 operation "+"
+	setcycle 29 operand1 "2"
+	setcycle 29 result "6"
+	setcycle 29 problemType "filler"
+	setcycle 29 operand2 "4"
+	setcycle 30 operation "+"
+	setcycle 30 operand1 "3"
+	setcycle 30 result "7"
+	setcycle 30 problemType "filler"
+	setcycle 30 operand2 "4"
+	setcycle 31 operation "+"
+	setcycle 31 operand1 "2"
+	setcycle 31 result "7"
+	setcycle 31 problemType "filler"
+	setcycle 31 operand2 "5"
+	setcycle 32 operation "+"
+	setcycle 32 operand1 "4"
+	setcycle 32 result "8"
+	setcycle 32 problemType "filler"
+	setcycle 32 operand2 "4"
+	setcycle 33 operation "+"
+	setcycle 33 operand1 "3"
+	setcycle 33 result "8"
+	setcycle 33 problemType "filler"
+	setcycle 33 operand2 "5"
+	setcycle 34 operation "+"
+	setcycle 34 operand1 "5"
+	setcycle 34 result "9"
+	setcycle 34 problemType "filler"
+	setcycle 34 operand2 "4"
+	setcycle 35 operation "+"
+	setcycle 35 operand1 "4"
+	setcycle 35 result "9"
+	setcycle 35 problemType "filler"
+	setcycle 35 operand2 "5"
 	run block1_sequence
 
 define sequence experiment
@@ -105,18 +255,17 @@ define logger logger
 	log height
 	log subject_nr
 	log width
-	log response
-	log accuracy
 	log rt
 	log xTrajectory
 	log yTrajectory
 	log tTrajectory
-	log stimulus
-	log truth
+	log operand1
 	log operation
-	log size
-	log SOAcondition
+	log operand2
+	log result
+	log problemType
 	log endpoint
+	log error
 
 define inline_script mousetracking_script_block1
 	set description "Executes Python code"
@@ -129,7 +278,7 @@ define inline_script mousetracking_script_block1
 		my_canvas.line(0.1*2*mx,0.1*2*my,0.9*2*mx,0.1*2*my,color='white') 
 		my_canvas.set_font(style='helvetica',size=30)
 		my_canvas.text("0",x=0.1*2*mx-15,y=0.1*2*my,color='gray')
-		my_canvas.text("20",x=0.9*2*mx+25,y=0.1*2*my,color='gray')
+		my_canvas.text("10",x=0.9*2*mx+25,y=0.1*2*my,color='gray')
 	
 	# start button
 	def start_button():
@@ -171,8 +320,8 @@ define inline_script mousetracking_script_block1
 	
 	# problem
 	my_canvas.set_font(style='arial',size=60)
+	stimulus = "%d %s %d" % (operand1,operation,operand2)
 	my_canvas.text(stimulus,x=mx,y=0.05*2*my,color='white')
-	
 	my_canvas.show()
 	
 	
@@ -189,7 +338,8 @@ define inline_script mousetracking_script_block1
 		x, y = position
 		if y < 0.1*2*my:
 			rt=timestamp-start
-			endpoint=x
+			endpoint=6.25*x/mx-1.25 # based on line length of 10
+			error=endpoint-result
 			my_canvas.arrow(x,0.1*2*my+40,x,0.1*2*my,arrow_size=15,color='green',fill=True)
 			my_canvas.show()
 			break
@@ -208,6 +358,7 @@ define inline_script mousetracking_script_block1
 	#self.experiment.set("response", resp)
 	#self.experiment.set("accuracy", accuracy)
 	self.experiment.set("endpoint",endpoint)
+	self.experiment.set("error",error)
 	self.experiment.set("rt", rt)
 	self.experiment.set("xTrajectory", str(xList))
 	self.experiment.set("yTrajectory", str(yList))
@@ -234,10 +385,11 @@ define inline_script mousetracking_script_block1
 	error_message = "<span color='red'>X</span>"
 	
 	# Turn our OpenSesame variables into plain Python ones
-	stimulus = exp.get('stimulus')
-	truth = exp.get('truth')
-	SOAcondition = exp.get('SOAcondition')
+	operand1 = exp.get('operand1')
 	operation = exp.get('operation')
+	operand2 = exp.get('operand2')
+	result = exp.get('result')
+	problemType = exp.get('problemType')
 	
 	
 	
