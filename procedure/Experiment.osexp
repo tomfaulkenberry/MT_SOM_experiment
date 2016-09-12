@@ -31,18 +31,12 @@ set canvas_backend legacy
 set bidi no
 set background black
 
-define sequence block1_sequence
-	set flush_keyboard yes
-	set description "Runs a number of items in sequence"
-	run mousetracking_script_block1 always
-	run logger always
-
 define loop block_1
 	set skip 0
-	set repeat 1
+	set repeat 2
 	set order random
 	set offset no
-	set item block1_sequence
+	set item experimentalSequence_4
 	set description "Repeatedly runs another item"
 	set cycles 36
 	set column_order "operand1;operation;operand2;result;problemType"
@@ -227,15 +221,634 @@ define loop block_1
 	setcycle 35 result "9"
 	setcycle 35 problemType "filler"
 	setcycle 35 operand2 "5"
-	run block1_sequence
+	run experimentalSequence_4
+
+define loop block_2
+	set skip 0
+	set repeat 2
+	set order random
+	set offset no
+	set item experimentalSequence_1
+	set description "Repeatedly runs another item"
+	set cycles 36
+	set column_order "operand1;operation;operand2;result;problemType"
+	set break_if never
+	setcycle 0 operation "+"
+	setcycle 0 operand1 "2"
+	setcycle 0 result "2"
+	setcycle 0 problemType "target"
+	setcycle 0 operand2 "0"
+	setcycle 1 operation "-"
+	setcycle 1 operand1 "2"
+	setcycle 1 result "2"
+	setcycle 1 problemType "target"
+	setcycle 1 operand2 "0"
+	setcycle 2 operation "+"
+	setcycle 2 operand1 "3"
+	setcycle 2 result "3"
+	setcycle 2 problemType "target"
+	setcycle 2 operand2 "0"
+	setcycle 3 operation "-"
+	setcycle 3 operand1 "3"
+	setcycle 3 result "3"
+	setcycle 3 problemType "target"
+	setcycle 3 operand2 "0"
+	setcycle 4 operation "+"
+	setcycle 4 operand1 "4"
+	setcycle 4 result "4"
+	setcycle 4 problemType "target"
+	setcycle 4 operand2 "0"
+	setcycle 5 operation "+"
+	setcycle 5 operand1 "3"
+	setcycle 5 result "4"
+	setcycle 5 problemType "target"
+	setcycle 5 operand2 "1"
+	setcycle 6 operation "+"
+	setcycle 6 operand1 "2"
+	setcycle 6 result "4"
+	setcycle 6 problemType "target"
+	setcycle 6 operand2 "2"
+	setcycle 7 operation "-"
+	setcycle 7 operand1 "4"
+	setcycle 7 result "4"
+	setcycle 7 problemType "target"
+	setcycle 7 operand2 "0"
+	setcycle 8 operation "-"
+	setcycle 8 operand1 "5"
+	setcycle 8 result "4"
+	setcycle 8 problemType "target"
+	setcycle 8 operand2 "1"
+	setcycle 9 operation "-"
+	setcycle 9 operand1 "6"
+	setcycle 9 result "4"
+	setcycle 9 problemType "target"
+	setcycle 9 operand2 "2"
+	setcycle 10 operation "+"
+	setcycle 10 operand1 "6"
+	setcycle 10 result "6"
+	setcycle 10 problemType "target"
+	setcycle 10 operand2 "0"
+	setcycle 11 operation "+"
+	setcycle 11 operand1 "5"
+	setcycle 11 result "6"
+	setcycle 11 problemType "target"
+	setcycle 11 operand2 "1"
+	setcycle 12 operation "+"
+	setcycle 12 operand1 "4"
+	setcycle 12 result "6"
+	setcycle 12 problemType "target"
+	setcycle 12 operand2 "2"
+	setcycle 13 operation "-"
+	setcycle 13 operand1 "6"
+	setcycle 13 result "6"
+	setcycle 13 problemType "target"
+	setcycle 13 operand2 "0"
+	setcycle 14 operation "-"
+	setcycle 14 operand1 "7"
+	setcycle 14 result "6"
+	setcycle 14 problemType "target"
+	setcycle 14 operand2 "1"
+	setcycle 15 operation "-"
+	setcycle 15 operand1 "8"
+	setcycle 15 result "6"
+	setcycle 15 problemType "target"
+	setcycle 15 operand2 "2"
+	setcycle 16 operation "+"
+	setcycle 16 operand1 "7"
+	setcycle 16 result "7"
+	setcycle 16 problemType "target"
+	setcycle 16 operand2 "0"
+	setcycle 17 operation "-"
+	setcycle 17 operand1 "7"
+	setcycle 17 result "7"
+	setcycle 17 problemType "target"
+	setcycle 17 operand2 "0"
+	setcycle 18 operation "+"
+	setcycle 18 operand1 "8"
+	setcycle 18 result "8"
+	setcycle 18 problemType "target"
+	setcycle 18 operand2 "0"
+	setcycle 19 operation "-"
+	setcycle 19 operand1 "8"
+	setcycle 19 result "8"
+	setcycle 19 problemType "target"
+	setcycle 19 operand2 "0"
+	setcycle 20 operation "-"
+	setcycle 20 operand1 "5"
+	setcycle 20 result "1"
+	setcycle 20 problemType "filler"
+	setcycle 20 operand2 "4"
+	setcycle 21 operation "-"
+	setcycle 21 operand1 "6"
+	setcycle 21 result "1"
+	setcycle 21 problemType "filler"
+	setcycle 21 operand2 "5"
+	setcycle 22 operation "-"
+	setcycle 22 operand1 "6"
+	setcycle 22 result "2"
+	setcycle 22 problemType "filler"
+	setcycle 22 operand2 "4"
+	setcycle 23 operation "-"
+	setcycle 23 operand1 "7"
+	setcycle 23 result "2"
+	setcycle 23 problemType "filler"
+	setcycle 23 operand2 "5"
+	setcycle 24 operation "-"
+	setcycle 24 operand1 "7"
+	setcycle 24 result "3"
+	setcycle 24 problemType "filler"
+	setcycle 24 operand2 "4"
+	setcycle 25 operation "-"
+	setcycle 25 operand1 "8"
+	setcycle 25 result "3"
+	setcycle 25 problemType "filler"
+	setcycle 25 operand2 "5"
+	setcycle 26 operation "-"
+	setcycle 26 operand1 "7"
+	setcycle 26 result "4"
+	setcycle 26 problemType "filler"
+	setcycle 26 operand2 "3"
+	setcycle 27 operation "-"
+	setcycle 27 operand1 "8"
+	setcycle 27 result "4"
+	setcycle 27 problemType "filler"
+	setcycle 27 operand2 "4"
+	setcycle 28 operation "+"
+	setcycle 28 operand1 "3"
+	setcycle 28 result "6"
+	setcycle 28 problemType "filler"
+	setcycle 28 operand2 "3"
+	setcycle 29 operation "+"
+	setcycle 29 operand1 "2"
+	setcycle 29 result "6"
+	setcycle 29 problemType "filler"
+	setcycle 29 operand2 "4"
+	setcycle 30 operation "+"
+	setcycle 30 operand1 "3"
+	setcycle 30 result "7"
+	setcycle 30 problemType "filler"
+	setcycle 30 operand2 "4"
+	setcycle 31 operation "+"
+	setcycle 31 operand1 "2"
+	setcycle 31 result "7"
+	setcycle 31 problemType "filler"
+	setcycle 31 operand2 "5"
+	setcycle 32 operation "+"
+	setcycle 32 operand1 "4"
+	setcycle 32 result "8"
+	setcycle 32 problemType "filler"
+	setcycle 32 operand2 "4"
+	setcycle 33 operation "+"
+	setcycle 33 operand1 "3"
+	setcycle 33 result "8"
+	setcycle 33 problemType "filler"
+	setcycle 33 operand2 "5"
+	setcycle 34 operation "+"
+	setcycle 34 operand1 "5"
+	setcycle 34 result "9"
+	setcycle 34 problemType "filler"
+	setcycle 34 operand2 "4"
+	setcycle 35 operation "+"
+	setcycle 35 operand1 "4"
+	setcycle 35 result "9"
+	setcycle 35 problemType "filler"
+	setcycle 35 operand2 "5"
+	run experimentalSequence_1
+
+define loop block_3
+	set skip 0
+	set repeat 2
+	set order random
+	set offset no
+	set item experimentalSequence_2
+	set description "Repeatedly runs another item"
+	set cycles 36
+	set column_order "operand1;operation;operand2;result;problemType"
+	set break_if never
+	setcycle 0 operation "+"
+	setcycle 0 operand1 "2"
+	setcycle 0 result "2"
+	setcycle 0 problemType "target"
+	setcycle 0 operand2 "0"
+	setcycle 1 operation "-"
+	setcycle 1 operand1 "2"
+	setcycle 1 result "2"
+	setcycle 1 problemType "target"
+	setcycle 1 operand2 "0"
+	setcycle 2 operation "+"
+	setcycle 2 operand1 "3"
+	setcycle 2 result "3"
+	setcycle 2 problemType "target"
+	setcycle 2 operand2 "0"
+	setcycle 3 operation "-"
+	setcycle 3 operand1 "3"
+	setcycle 3 result "3"
+	setcycle 3 problemType "target"
+	setcycle 3 operand2 "0"
+	setcycle 4 operation "+"
+	setcycle 4 operand1 "4"
+	setcycle 4 result "4"
+	setcycle 4 problemType "target"
+	setcycle 4 operand2 "0"
+	setcycle 5 operation "+"
+	setcycle 5 operand1 "3"
+	setcycle 5 result "4"
+	setcycle 5 problemType "target"
+	setcycle 5 operand2 "1"
+	setcycle 6 operation "+"
+	setcycle 6 operand1 "2"
+	setcycle 6 result "4"
+	setcycle 6 problemType "target"
+	setcycle 6 operand2 "2"
+	setcycle 7 operation "-"
+	setcycle 7 operand1 "4"
+	setcycle 7 result "4"
+	setcycle 7 problemType "target"
+	setcycle 7 operand2 "0"
+	setcycle 8 operation "-"
+	setcycle 8 operand1 "5"
+	setcycle 8 result "4"
+	setcycle 8 problemType "target"
+	setcycle 8 operand2 "1"
+	setcycle 9 operation "-"
+	setcycle 9 operand1 "6"
+	setcycle 9 result "4"
+	setcycle 9 problemType "target"
+	setcycle 9 operand2 "2"
+	setcycle 10 operation "+"
+	setcycle 10 operand1 "6"
+	setcycle 10 result "6"
+	setcycle 10 problemType "target"
+	setcycle 10 operand2 "0"
+	setcycle 11 operation "+"
+	setcycle 11 operand1 "5"
+	setcycle 11 result "6"
+	setcycle 11 problemType "target"
+	setcycle 11 operand2 "1"
+	setcycle 12 operation "+"
+	setcycle 12 operand1 "4"
+	setcycle 12 result "6"
+	setcycle 12 problemType "target"
+	setcycle 12 operand2 "2"
+	setcycle 13 operation "-"
+	setcycle 13 operand1 "6"
+	setcycle 13 result "6"
+	setcycle 13 problemType "target"
+	setcycle 13 operand2 "0"
+	setcycle 14 operation "-"
+	setcycle 14 operand1 "7"
+	setcycle 14 result "6"
+	setcycle 14 problemType "target"
+	setcycle 14 operand2 "1"
+	setcycle 15 operation "-"
+	setcycle 15 operand1 "8"
+	setcycle 15 result "6"
+	setcycle 15 problemType "target"
+	setcycle 15 operand2 "2"
+	setcycle 16 operation "+"
+	setcycle 16 operand1 "7"
+	setcycle 16 result "7"
+	setcycle 16 problemType "target"
+	setcycle 16 operand2 "0"
+	setcycle 17 operation "-"
+	setcycle 17 operand1 "7"
+	setcycle 17 result "7"
+	setcycle 17 problemType "target"
+	setcycle 17 operand2 "0"
+	setcycle 18 operation "+"
+	setcycle 18 operand1 "8"
+	setcycle 18 result "8"
+	setcycle 18 problemType "target"
+	setcycle 18 operand2 "0"
+	setcycle 19 operation "-"
+	setcycle 19 operand1 "8"
+	setcycle 19 result "8"
+	setcycle 19 problemType "target"
+	setcycle 19 operand2 "0"
+	setcycle 20 operation "-"
+	setcycle 20 operand1 "5"
+	setcycle 20 result "1"
+	setcycle 20 problemType "filler"
+	setcycle 20 operand2 "4"
+	setcycle 21 operation "-"
+	setcycle 21 operand1 "6"
+	setcycle 21 result "1"
+	setcycle 21 problemType "filler"
+	setcycle 21 operand2 "5"
+	setcycle 22 operation "-"
+	setcycle 22 operand1 "6"
+	setcycle 22 result "2"
+	setcycle 22 problemType "filler"
+	setcycle 22 operand2 "4"
+	setcycle 23 operation "-"
+	setcycle 23 operand1 "7"
+	setcycle 23 result "2"
+	setcycle 23 problemType "filler"
+	setcycle 23 operand2 "5"
+	setcycle 24 operation "-"
+	setcycle 24 operand1 "7"
+	setcycle 24 result "3"
+	setcycle 24 problemType "filler"
+	setcycle 24 operand2 "4"
+	setcycle 25 operation "-"
+	setcycle 25 operand1 "8"
+	setcycle 25 result "3"
+	setcycle 25 problemType "filler"
+	setcycle 25 operand2 "5"
+	setcycle 26 operation "-"
+	setcycle 26 operand1 "7"
+	setcycle 26 result "4"
+	setcycle 26 problemType "filler"
+	setcycle 26 operand2 "3"
+	setcycle 27 operation "-"
+	setcycle 27 operand1 "8"
+	setcycle 27 result "4"
+	setcycle 27 problemType "filler"
+	setcycle 27 operand2 "4"
+	setcycle 28 operation "+"
+	setcycle 28 operand1 "3"
+	setcycle 28 result "6"
+	setcycle 28 problemType "filler"
+	setcycle 28 operand2 "3"
+	setcycle 29 operation "+"
+	setcycle 29 operand1 "2"
+	setcycle 29 result "6"
+	setcycle 29 problemType "filler"
+	setcycle 29 operand2 "4"
+	setcycle 30 operation "+"
+	setcycle 30 operand1 "3"
+	setcycle 30 result "7"
+	setcycle 30 problemType "filler"
+	setcycle 30 operand2 "4"
+	setcycle 31 operation "+"
+	setcycle 31 operand1 "2"
+	setcycle 31 result "7"
+	setcycle 31 problemType "filler"
+	setcycle 31 operand2 "5"
+	setcycle 32 operation "+"
+	setcycle 32 operand1 "4"
+	setcycle 32 result "8"
+	setcycle 32 problemType "filler"
+	setcycle 32 operand2 "4"
+	setcycle 33 operation "+"
+	setcycle 33 operand1 "3"
+	setcycle 33 result "8"
+	setcycle 33 problemType "filler"
+	setcycle 33 operand2 "5"
+	setcycle 34 operation "+"
+	setcycle 34 operand1 "5"
+	setcycle 34 result "9"
+	setcycle 34 problemType "filler"
+	setcycle 34 operand2 "4"
+	setcycle 35 operation "+"
+	setcycle 35 operand1 "4"
+	setcycle 35 result "9"
+	setcycle 35 problemType "filler"
+	setcycle 35 operand2 "5"
+	run experimentalSequence_2
+
+define loop block_4
+	set skip 0
+	set repeat 2
+	set order random
+	set offset no
+	set item experimentalSequence_3
+	set description "Repeatedly runs another item"
+	set cycles 36
+	set column_order "operand1;operation;operand2;result;problemType"
+	set break_if never
+	setcycle 0 operation "+"
+	setcycle 0 operand1 "2"
+	setcycle 0 result "2"
+	setcycle 0 problemType "target"
+	setcycle 0 operand2 "0"
+	setcycle 1 operation "-"
+	setcycle 1 operand1 "2"
+	setcycle 1 result "2"
+	setcycle 1 problemType "target"
+	setcycle 1 operand2 "0"
+	setcycle 2 operation "+"
+	setcycle 2 operand1 "3"
+	setcycle 2 result "3"
+	setcycle 2 problemType "target"
+	setcycle 2 operand2 "0"
+	setcycle 3 operation "-"
+	setcycle 3 operand1 "3"
+	setcycle 3 result "3"
+	setcycle 3 problemType "target"
+	setcycle 3 operand2 "0"
+	setcycle 4 operation "+"
+	setcycle 4 operand1 "4"
+	setcycle 4 result "4"
+	setcycle 4 problemType "target"
+	setcycle 4 operand2 "0"
+	setcycle 5 operation "+"
+	setcycle 5 operand1 "3"
+	setcycle 5 result "4"
+	setcycle 5 problemType "target"
+	setcycle 5 operand2 "1"
+	setcycle 6 operation "+"
+	setcycle 6 operand1 "2"
+	setcycle 6 result "4"
+	setcycle 6 problemType "target"
+	setcycle 6 operand2 "2"
+	setcycle 7 operation "-"
+	setcycle 7 operand1 "4"
+	setcycle 7 result "4"
+	setcycle 7 problemType "target"
+	setcycle 7 operand2 "0"
+	setcycle 8 operation "-"
+	setcycle 8 operand1 "5"
+	setcycle 8 result "4"
+	setcycle 8 problemType "target"
+	setcycle 8 operand2 "1"
+	setcycle 9 operation "-"
+	setcycle 9 operand1 "6"
+	setcycle 9 result "4"
+	setcycle 9 problemType "target"
+	setcycle 9 operand2 "2"
+	setcycle 10 operation "+"
+	setcycle 10 operand1 "6"
+	setcycle 10 result "6"
+	setcycle 10 problemType "target"
+	setcycle 10 operand2 "0"
+	setcycle 11 operation "+"
+	setcycle 11 operand1 "5"
+	setcycle 11 result "6"
+	setcycle 11 problemType "target"
+	setcycle 11 operand2 "1"
+	setcycle 12 operation "+"
+	setcycle 12 operand1 "4"
+	setcycle 12 result "6"
+	setcycle 12 problemType "target"
+	setcycle 12 operand2 "2"
+	setcycle 13 operation "-"
+	setcycle 13 operand1 "6"
+	setcycle 13 result "6"
+	setcycle 13 problemType "target"
+	setcycle 13 operand2 "0"
+	setcycle 14 operation "-"
+	setcycle 14 operand1 "7"
+	setcycle 14 result "6"
+	setcycle 14 problemType "target"
+	setcycle 14 operand2 "1"
+	setcycle 15 operation "-"
+	setcycle 15 operand1 "8"
+	setcycle 15 result "6"
+	setcycle 15 problemType "target"
+	setcycle 15 operand2 "2"
+	setcycle 16 operation "+"
+	setcycle 16 operand1 "7"
+	setcycle 16 result "7"
+	setcycle 16 problemType "target"
+	setcycle 16 operand2 "0"
+	setcycle 17 operation "-"
+	setcycle 17 operand1 "7"
+	setcycle 17 result "7"
+	setcycle 17 problemType "target"
+	setcycle 17 operand2 "0"
+	setcycle 18 operation "+"
+	setcycle 18 operand1 "8"
+	setcycle 18 result "8"
+	setcycle 18 problemType "target"
+	setcycle 18 operand2 "0"
+	setcycle 19 operation "-"
+	setcycle 19 operand1 "8"
+	setcycle 19 result "8"
+	setcycle 19 problemType "target"
+	setcycle 19 operand2 "0"
+	setcycle 20 operation "-"
+	setcycle 20 operand1 "5"
+	setcycle 20 result "1"
+	setcycle 20 problemType "filler"
+	setcycle 20 operand2 "4"
+	setcycle 21 operation "-"
+	setcycle 21 operand1 "6"
+	setcycle 21 result "1"
+	setcycle 21 problemType "filler"
+	setcycle 21 operand2 "5"
+	setcycle 22 operation "-"
+	setcycle 22 operand1 "6"
+	setcycle 22 result "2"
+	setcycle 22 problemType "filler"
+	setcycle 22 operand2 "4"
+	setcycle 23 operation "-"
+	setcycle 23 operand1 "7"
+	setcycle 23 result "2"
+	setcycle 23 problemType "filler"
+	setcycle 23 operand2 "5"
+	setcycle 24 operation "-"
+	setcycle 24 operand1 "7"
+	setcycle 24 result "3"
+	setcycle 24 problemType "filler"
+	setcycle 24 operand2 "4"
+	setcycle 25 operation "-"
+	setcycle 25 operand1 "8"
+	setcycle 25 result "3"
+	setcycle 25 problemType "filler"
+	setcycle 25 operand2 "5"
+	setcycle 26 operation "-"
+	setcycle 26 operand1 "7"
+	setcycle 26 result "4"
+	setcycle 26 problemType "filler"
+	setcycle 26 operand2 "3"
+	setcycle 27 operation "-"
+	setcycle 27 operand1 "8"
+	setcycle 27 result "4"
+	setcycle 27 problemType "filler"
+	setcycle 27 operand2 "4"
+	setcycle 28 operation "+"
+	setcycle 28 operand1 "3"
+	setcycle 28 result "6"
+	setcycle 28 problemType "filler"
+	setcycle 28 operand2 "3"
+	setcycle 29 operation "+"
+	setcycle 29 operand1 "2"
+	setcycle 29 result "6"
+	setcycle 29 problemType "filler"
+	setcycle 29 operand2 "4"
+	setcycle 30 operation "+"
+	setcycle 30 operand1 "3"
+	setcycle 30 result "7"
+	setcycle 30 problemType "filler"
+	setcycle 30 operand2 "4"
+	setcycle 31 operation "+"
+	setcycle 31 operand1 "2"
+	setcycle 31 result "7"
+	setcycle 31 problemType "filler"
+	setcycle 31 operand2 "5"
+	setcycle 32 operation "+"
+	setcycle 32 operand1 "4"
+	setcycle 32 result "8"
+	setcycle 32 problemType "filler"
+	setcycle 32 operand2 "4"
+	setcycle 33 operation "+"
+	setcycle 33 operand1 "3"
+	setcycle 33 result "8"
+	setcycle 33 problemType "filler"
+	setcycle 33 operand2 "5"
+	setcycle 34 operation "+"
+	setcycle 34 operand1 "5"
+	setcycle 34 result "9"
+	setcycle 34 problemType "filler"
+	setcycle 34 operand2 "4"
+	setcycle 35 operation "+"
+	setcycle 35 operand1 "4"
+	setcycle 35 result "9"
+	setcycle 35 problemType "filler"
+	setcycle 35 operand2 "5"
+	run experimentalSequence_3
+
+define sketchpad break
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=24 html=yes show_if=always text="You may take a short break. <br> Please press any key when you are ready to resume the experiment." x=32 y=-64 z_index=0
 
 define sequence experiment
 	set flush_keyboard yes
 	set description "Runs a number of items in sequence"
 	run setup_script always
 	run instruction1 always
+	run instruction2 always
+	run practiceBlock always
+	run instruction3 always
 	run block_1 always
+	run break always
+	run block_2 always
+	run break always
+	run block_3 always
+	run break always
+	run block_4 always
 	run finish always
+
+define sequence experimentalSequence
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run mousetracking_script always
+
+define sequence experimentalSequence_1
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run mousetracking_script_1 always
+	run logger_1 always
+
+define sequence experimentalSequence_2
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run mousetracking_script_2 always
+	run logger_2 always
+
+define sequence experimentalSequence_3
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run mousetracking_script_3 always
+	run logger_3 always
+
+define sequence experimentalSequence_4
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run mousetracking_script_4 always
+	run logger_4 always
 
 define sketchpad finish
 	set duration keypress
@@ -245,7 +858,17 @@ define sketchpad finish
 define sketchpad instruction1
 	set duration keypress
 	set description "Displays stimuli"
-	draw textline center=0 color=white font_bold=no font_family=mono font_italic=no font_size=24 html=yes show_if=always text="In this experiment, you will be deciding whether<br />equations involving simple arithmetic are true <br />or false.<br /><br />After you click on the START button with your mouse,<br />the equation will appear in the center of the screen.<br />You will then move your mouse and click either True or<br />False, depending on the equation.<br /><br />Please start moving your mouse as quickly as possible.<br />Try to be quick, but accurate.<br /><br />To get accustomed to the task, you will do 16 practice trials.<br /><br />When you are ready to begin, press any key." x=-352 y=-256 z_index=0
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=24 html=yes show_if=always text="In this experiment, you will be asked to answer several simple arithmetic problems.<br><br>At the beginning of each trial, you will see a fixation cross (+)<br> in the center of the screen along with a number line starting at 0 and ending at 10.<br><br>When you move your computer mouse upward,<br> an arithmetic problem will appear above the number line.<br /><br />As quickly and accurately as possible, <br> you will move your computer mouse to the approximate location <br> of the problem's answer on the number line.<br><br>To begin, we will do a few practice trials.<br><br>When you are ready to begin the practice trials, press any key." x=32.0 y=-32.0 z_index=0
+
+define sketchpad instruction2
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=24 html=yes show_if=always text="In this practice block, you will do 36 trials. <br><br> When your computer mouse pointer crosses the number line, <br> a green arrow will appear, indicating your answer.<br><br> Additionally, a red arrow will appear above the number line,<br> indicating the exact position of the answer.<br><br> If at first you find that your answers are not very accurate, don't worry!<br> The purpose of this feedback is simply to help calibrate your hand movements <br> with the lab equipment for the later trials.<br><br> When you are ready to begin your practice trials,<br> press any key to begin." x=32 y=-32 z_index=0
+
+define sketchpad instruction3
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=24 html=yes show_if=always text="You are now ready to begin the experiment.<br><br> You will complete 308 trials just like the ones you practiced.<br> However, you will not be given any feedback on these trials.<br><br> Remember, please make your responses as quickly and accurately as possible.<br><br> After every group of 72 trials, you will be given an opportunity for a short break.<br><br> Please press any key when you are ready to begin." x=32 y=-32 z_index=0
 
 define logger logger
 	set use_quotes yes
@@ -267,7 +890,228 @@ define logger logger
 	log endpoint
 	log error
 
-define inline_script mousetracking_script_block1
+define logger logger_1
+	set use_quotes yes
+	set ignore_missing yes
+	set description "Logs experimental data"
+	set auto_log no
+	log height
+	log subject_nr
+	log width
+	log rt
+	log xTrajectory
+	log yTrajectory
+	log tTrajectory
+	log operand1
+	log operation
+	log operand2
+	log result
+	log problemType
+	log endpoint
+	log error
+
+define logger logger_2
+	set use_quotes yes
+	set ignore_missing yes
+	set description "Logs experimental data"
+	set auto_log no
+	log height
+	log subject_nr
+	log width
+	log rt
+	log xTrajectory
+	log yTrajectory
+	log tTrajectory
+	log operand1
+	log operation
+	log operand2
+	log result
+	log problemType
+	log endpoint
+	log error
+
+define logger logger_3
+	set use_quotes yes
+	set ignore_missing yes
+	set description "Logs experimental data"
+	set auto_log no
+	log height
+	log subject_nr
+	log width
+	log rt
+	log xTrajectory
+	log yTrajectory
+	log tTrajectory
+	log operand1
+	log operation
+	log operand2
+	log result
+	log problemType
+	log endpoint
+	log error
+
+define logger logger_4
+	set use_quotes yes
+	set ignore_missing yes
+	set description "Logs experimental data"
+	set auto_log no
+	log height
+	log subject_nr
+	log width
+	log rt
+	log xTrajectory
+	log yTrajectory
+	log tTrajectory
+	log operand1
+	log operation
+	log operand2
+	log result
+	log problemType
+	log endpoint
+	log error
+
+define inline_script mousetracking_script
+	set description "Executes Python code"
+	___run__
+	# Draw start button and number line
+	# define common stimulus elements as Python functions
+	
+	# number line
+	def number_line():
+		my_canvas.line(0.1*2*mx,0.1*2*my,0.9*2*mx,0.1*2*my,color='white') 
+		my_canvas.set_font(style='helvetica',size=30)
+		my_canvas.text("0",x=0.1*2*mx-15,y=0.1*2*my,color='gray')
+		my_canvas.text("10",x=0.9*2*mx+25,y=0.1*2*my,color='gray')
+	
+	# start button
+	def start_button():
+		my_canvas.set_font(style='mono',size=24)
+		my_canvas.rect(x=mx-0.5*start_w,y=2*my-start_h,w=start_w,h=start_h,fill=True,color='gray')  
+		my_canvas.text("Start",x=mx,y=2*my-0.5*start_h,color='white')
+	
+	
+	number_line()
+	start_button()
+	my_canvas.show()
+	my_mouse.show_cursor(show=True)
+	
+	# Display fixation cross after click on start button
+	while 1:
+		button, position, timestamp = my_mouse.get_click()
+		x, y = position
+		if x > mx-0.5*start_w and x < mx+0.5*start_w and y > (2*my) - start_h:
+			my_canvas.clear()
+			break
+	
+	my_canvas.set_font(style='mono',size=60)
+	my_canvas.text('+')
+	number_line()
+	start_button()
+	my_canvas.show()
+	
+	# display problem above number line when mouse gets high enough on screen
+	
+	while 1:
+		position, timestamp = my_mouse.get_pos()
+		x, y = position
+		if y < 0.9*2*my:
+			my_canvas.clear()
+			break
+	
+	number_line()
+	start_button()
+	
+	# problem
+	my_canvas.set_font(style='arial',size=60)
+	stimulus = "%d %s %d" % (operand1,operation,operand2)
+	my_canvas.text(stimulus,x=mx,y=0.05*2*my,color='white')
+	my_canvas.show()
+	
+	
+	
+	
+	# The actual mouse tracking
+	t0 = start = exp.time()
+	t1 = t0 + sample_rate
+	resp = 0
+	timed_out = False
+	slow_start = False
+	while 1:
+		position, timestamp = my_mouse.get_pos()
+		x, y = position
+		if y < 0.1*2*my:
+			rt=timestamp-start
+			endpoint=6.25*x/mx-1.25 # based on line length of 10
+			error=endpoint-result
+			my_canvas.arrow(x,0.1*2*my+40,x,0.1*2*my,arrow_size=15,color='green',fill=True)
+			my_canvas.arrow(0.2*mx+0.16*result*mx,0.1*2*my-40,0.2*mx+0.16*result*mx,0.1*2*my,arrow_size=15,color='red',fill=True)
+			my_canvas.show()
+			break
+	
+		if timestamp > t1:
+			# It's time to record the mouse position
+			t1 += sample_rate
+			t = timestamp - start
+			xList.append(x)
+			yList.append(y)
+			tList.append(t)
+	
+	
+	
+	# Standard Logging (the probe and code variables are taken care of automatically)
+	#self.experiment.set("response", resp)
+	#self.experiment.set("accuracy", accuracy)
+	self.experiment.set("endpoint",endpoint)
+	self.experiment.set("error",error)
+	self.experiment.set("rt", rt)
+	self.experiment.set("xTrajectory", str(xList))
+	self.experiment.set("yTrajectory", str(yList))
+	self.experiment.set("tTrajectory", str(tList))
+	#self.experiment.set("trialNumber", count_block1_sequence)
+	__end__
+	___prepare__
+	# Constants
+	max_response_time = 2000
+	fixation_length = 900
+	error_message_duration = 2000
+	max_init_time = 800
+	sample_rate = 10
+	
+	# Text
+	timeout_message = "Too slow!\n\
+	Try to respond more quickly.\n\
+	Press any key to continue."
+	slow_start_message = "\
+	Please try to move the mouse as soon\n\
+	as you see the target, even if you're not\n\
+	sure of your response yet\n\
+	Press any key to continue."
+	error_message = "<span color='red'>X</span>"
+	
+	# Turn our OpenSesame variables into plain Python ones
+	operand1 = exp.get('operand1')
+	operation = exp.get('operation')
+	operand2 = exp.get('operand2')
+	result = exp.get('result')
+	problemType = exp.get('problemType')
+	
+	
+	
+	
+	# Get the size of the screen
+	mx = my_canvas.xcenter()
+	my = my_canvas.ycenter()
+	
+	# Some dimensions
+	# start button sized as in Dotan & Dehaene (2013)
+	start_w=0.0585*2*mx
+	start_h=0.052*2*my
+	
+	# Some empty lists for recording mouse data
+	xList, yList, tList = [], [], []
+	__end__
+
+define inline_script mousetracking_script_1
 	set description "Executes Python code"
 	___run__
 	# Draw start button and number line
@@ -406,6 +1250,618 @@ define inline_script mousetracking_script_block1
 	# Some empty lists for recording mouse data
 	xList, yList, tList = [], [], []
 	__end__
+
+define inline_script mousetracking_script_2
+	set description "Executes Python code"
+	___run__
+	# Draw start button and number line
+	# define common stimulus elements as Python functions
+	
+	# number line
+	def number_line():
+		my_canvas.line(0.1*2*mx,0.1*2*my,0.9*2*mx,0.1*2*my,color='white') 
+		my_canvas.set_font(style='helvetica',size=30)
+		my_canvas.text("0",x=0.1*2*mx-15,y=0.1*2*my,color='gray')
+		my_canvas.text("10",x=0.9*2*mx+25,y=0.1*2*my,color='gray')
+	
+	# start button
+	def start_button():
+		my_canvas.set_font(style='mono',size=24)
+		my_canvas.rect(x=mx-0.5*start_w,y=2*my-start_h,w=start_w,h=start_h,fill=True,color='gray')  
+		my_canvas.text("Start",x=mx,y=2*my-0.5*start_h,color='white')
+	
+	
+	number_line()
+	start_button()
+	my_canvas.show()
+	my_mouse.show_cursor(show=True)
+	
+	# Display fixation cross after click on start button
+	while 1:
+		button, position, timestamp = my_mouse.get_click()
+		x, y = position
+		if x > mx-0.5*start_w and x < mx+0.5*start_w and y > (2*my) - start_h:
+			my_canvas.clear()
+			break
+	
+	my_canvas.set_font(style='mono',size=60)
+	my_canvas.text('+')
+	number_line()
+	start_button()
+	my_canvas.show()
+	
+	# display problem above number line when mouse gets high enough on screen
+	
+	while 1:
+		position, timestamp = my_mouse.get_pos()
+		x, y = position
+		if y < 0.9*2*my:
+			my_canvas.clear()
+			break
+			
+	number_line()
+	start_button()
+	
+	# problem
+	my_canvas.set_font(style='arial',size=60)
+	stimulus = "%d %s %d" % (operand1,operation,operand2)
+	my_canvas.text(stimulus,x=mx,y=0.05*2*my,color='white')
+	my_canvas.show()
+	
+	
+	
+	
+	# The actual mouse tracking
+	t0 = start = exp.time()
+	t1 = t0 + sample_rate
+	resp = 0
+	timed_out = False
+	slow_start = False
+	while 1:
+		position, timestamp = my_mouse.get_pos()
+		x, y = position
+		if y < 0.1*2*my:
+			rt=timestamp-start
+			endpoint=6.25*x/mx-1.25 # based on line length of 10
+			error=endpoint-result
+			my_canvas.arrow(x,0.1*2*my+40,x,0.1*2*my,arrow_size=15,color='green',fill=True)
+			my_canvas.show()
+			break
+				
+		if timestamp > t1:
+			# It's time to record the mouse position
+			t1 += sample_rate
+			t = timestamp - start
+			xList.append(x)
+			yList.append(y)
+			tList.append(t)
+			
+	
+	
+	# Standard Logging (the probe and code variables are taken care of automatically)
+	#self.experiment.set("response", resp)
+	#self.experiment.set("accuracy", accuracy)
+	self.experiment.set("endpoint",endpoint)
+	self.experiment.set("error",error)
+	self.experiment.set("rt", rt)
+	self.experiment.set("xTrajectory", str(xList))
+	self.experiment.set("yTrajectory", str(yList))
+	self.experiment.set("tTrajectory", str(tList))
+	#self.experiment.set("trialNumber", count_block1_sequence)
+	__end__
+	___prepare__
+	# Constants
+	max_response_time = 2000
+	fixation_length = 900
+	error_message_duration = 2000
+	max_init_time = 800
+	sample_rate = 10
+	
+	# Text
+	timeout_message = "Too slow!\n\
+	Try to respond more quickly.\n\
+	Press any key to continue."
+	slow_start_message = "\
+	Please try to move the mouse as soon\n\
+	as you see the target, even if you're not\n\
+	sure of your response yet\n\
+	Press any key to continue."
+	error_message = "<span color='red'>X</span>"
+	
+	# Turn our OpenSesame variables into plain Python ones
+	operand1 = exp.get('operand1')
+	operation = exp.get('operation')
+	operand2 = exp.get('operand2')
+	result = exp.get('result')
+	problemType = exp.get('problemType')
+	
+	
+	
+	
+	# Get the size of the screen
+	mx = my_canvas.xcenter()
+	my = my_canvas.ycenter()
+	
+	# Some dimensions
+	# start button sized as in Dotan & Dehaene (2013)
+	start_w=0.0585*2*mx
+	start_h=0.052*2*my
+	
+	# Some empty lists for recording mouse data
+	xList, yList, tList = [], [], []
+	__end__
+
+define inline_script mousetracking_script_3
+	set description "Executes Python code"
+	___run__
+	# Draw start button and number line
+	# define common stimulus elements as Python functions
+	
+	# number line
+	def number_line():
+		my_canvas.line(0.1*2*mx,0.1*2*my,0.9*2*mx,0.1*2*my,color='white') 
+		my_canvas.set_font(style='helvetica',size=30)
+		my_canvas.text("0",x=0.1*2*mx-15,y=0.1*2*my,color='gray')
+		my_canvas.text("10",x=0.9*2*mx+25,y=0.1*2*my,color='gray')
+	
+	# start button
+	def start_button():
+		my_canvas.set_font(style='mono',size=24)
+		my_canvas.rect(x=mx-0.5*start_w,y=2*my-start_h,w=start_w,h=start_h,fill=True,color='gray')  
+		my_canvas.text("Start",x=mx,y=2*my-0.5*start_h,color='white')
+	
+	
+	number_line()
+	start_button()
+	my_canvas.show()
+	my_mouse.show_cursor(show=True)
+	
+	# Display fixation cross after click on start button
+	while 1:
+		button, position, timestamp = my_mouse.get_click()
+		x, y = position
+		if x > mx-0.5*start_w and x < mx+0.5*start_w and y > (2*my) - start_h:
+			my_canvas.clear()
+			break
+	
+	my_canvas.set_font(style='mono',size=60)
+	my_canvas.text('+')
+	number_line()
+	start_button()
+	my_canvas.show()
+	
+	# display problem above number line when mouse gets high enough on screen
+	
+	while 1:
+		position, timestamp = my_mouse.get_pos()
+		x, y = position
+		if y < 0.9*2*my:
+			my_canvas.clear()
+			break
+			
+	number_line()
+	start_button()
+	
+	# problem
+	my_canvas.set_font(style='arial',size=60)
+	stimulus = "%d %s %d" % (operand1,operation,operand2)
+	my_canvas.text(stimulus,x=mx,y=0.05*2*my,color='white')
+	my_canvas.show()
+	
+	
+	
+	
+	# The actual mouse tracking
+	t0 = start = exp.time()
+	t1 = t0 + sample_rate
+	resp = 0
+	timed_out = False
+	slow_start = False
+	while 1:
+		position, timestamp = my_mouse.get_pos()
+		x, y = position
+		if y < 0.1*2*my:
+			rt=timestamp-start
+			endpoint=6.25*x/mx-1.25 # based on line length of 10
+			error=endpoint-result
+			my_canvas.arrow(x,0.1*2*my+40,x,0.1*2*my,arrow_size=15,color='green',fill=True)
+			my_canvas.show()
+			break
+				
+		if timestamp > t1:
+			# It's time to record the mouse position
+			t1 += sample_rate
+			t = timestamp - start
+			xList.append(x)
+			yList.append(y)
+			tList.append(t)
+			
+	
+	
+	# Standard Logging (the probe and code variables are taken care of automatically)
+	#self.experiment.set("response", resp)
+	#self.experiment.set("accuracy", accuracy)
+	self.experiment.set("endpoint",endpoint)
+	self.experiment.set("error",error)
+	self.experiment.set("rt", rt)
+	self.experiment.set("xTrajectory", str(xList))
+	self.experiment.set("yTrajectory", str(yList))
+	self.experiment.set("tTrajectory", str(tList))
+	#self.experiment.set("trialNumber", count_block1_sequence)
+	__end__
+	___prepare__
+	# Constants
+	max_response_time = 2000
+	fixation_length = 900
+	error_message_duration = 2000
+	max_init_time = 800
+	sample_rate = 10
+	
+	# Text
+	timeout_message = "Too slow!\n\
+	Try to respond more quickly.\n\
+	Press any key to continue."
+	slow_start_message = "\
+	Please try to move the mouse as soon\n\
+	as you see the target, even if you're not\n\
+	sure of your response yet\n\
+	Press any key to continue."
+	error_message = "<span color='red'>X</span>"
+	
+	# Turn our OpenSesame variables into plain Python ones
+	operand1 = exp.get('operand1')
+	operation = exp.get('operation')
+	operand2 = exp.get('operand2')
+	result = exp.get('result')
+	problemType = exp.get('problemType')
+	
+	
+	
+	
+	# Get the size of the screen
+	mx = my_canvas.xcenter()
+	my = my_canvas.ycenter()
+	
+	# Some dimensions
+	# start button sized as in Dotan & Dehaene (2013)
+	start_w=0.0585*2*mx
+	start_h=0.052*2*my
+	
+	# Some empty lists for recording mouse data
+	xList, yList, tList = [], [], []
+	__end__
+
+define inline_script mousetracking_script_4
+	set description "Executes Python code"
+	___run__
+	# Draw start button and number line
+	# define common stimulus elements as Python functions
+	
+	# number line
+	def number_line():
+		my_canvas.line(0.1*2*mx,0.1*2*my,0.9*2*mx,0.1*2*my,color='white') 
+		my_canvas.set_font(style='helvetica',size=30)
+		my_canvas.text("0",x=0.1*2*mx-15,y=0.1*2*my,color='gray')
+		my_canvas.text("10",x=0.9*2*mx+25,y=0.1*2*my,color='gray')
+	
+	# start button
+	def start_button():
+		my_canvas.set_font(style='mono',size=24)
+		my_canvas.rect(x=mx-0.5*start_w,y=2*my-start_h,w=start_w,h=start_h,fill=True,color='gray')  
+		my_canvas.text("Start",x=mx,y=2*my-0.5*start_h,color='white')
+	
+	
+	number_line()
+	start_button()
+	my_canvas.show()
+	my_mouse.show_cursor(show=True)
+	
+	# Display fixation cross after click on start button
+	while 1:
+		button, position, timestamp = my_mouse.get_click()
+		x, y = position
+		if x > mx-0.5*start_w and x < mx+0.5*start_w and y > (2*my) - start_h:
+			my_canvas.clear()
+			break
+	
+	my_canvas.set_font(style='mono',size=60)
+	my_canvas.text('+')
+	number_line()
+	start_button()
+	my_canvas.show()
+	
+	# display problem above number line when mouse gets high enough on screen
+	
+	while 1:
+		position, timestamp = my_mouse.get_pos()
+		x, y = position
+		if y < 0.9*2*my:
+			my_canvas.clear()
+			break
+	
+	number_line()
+	start_button()
+	
+	# problem
+	my_canvas.set_font(style='arial',size=60)
+	stimulus = "%d %s %d" % (operand1,operation,operand2)
+	my_canvas.text(stimulus,x=mx,y=0.05*2*my,color='white')
+	my_canvas.show()
+	
+	
+	
+	
+	# The actual mouse tracking
+	t0 = start = exp.time()
+	t1 = t0 + sample_rate
+	resp = 0
+	timed_out = False
+	slow_start = False
+	while 1:
+		position, timestamp = my_mouse.get_pos()
+		x, y = position
+		if y < 0.1*2*my:
+			rt=timestamp-start
+			endpoint=6.25*x/mx-1.25 # based on line length of 10
+			error=endpoint-result
+			my_canvas.arrow(x,0.1*2*my+40,x,0.1*2*my,arrow_size=15,color='green',fill=True)
+			my_canvas.show()
+			break
+	
+		if timestamp > t1:
+			# It's time to record the mouse position
+			t1 += sample_rate
+			t = timestamp - start
+			xList.append(x)
+			yList.append(y)
+			tList.append(t)
+	
+	
+	
+	# Standard Logging (the probe and code variables are taken care of automatically)
+	#self.experiment.set("response", resp)
+	#self.experiment.set("accuracy", accuracy)
+	self.experiment.set("endpoint",endpoint)
+	self.experiment.set("error",error)
+	self.experiment.set("rt", rt)
+	self.experiment.set("xTrajectory", str(xList))
+	self.experiment.set("yTrajectory", str(yList))
+	self.experiment.set("tTrajectory", str(tList))
+	#self.experiment.set("trialNumber", count_block1_sequence)
+	__end__
+	___prepare__
+	# Constants
+	max_response_time = 2000
+	fixation_length = 900
+	error_message_duration = 2000
+	max_init_time = 800
+	sample_rate = 10
+	
+	# Text
+	timeout_message = "Too slow!\n\
+	Try to respond more quickly.\n\
+	Press any key to continue."
+	slow_start_message = "\
+	Please try to move the mouse as soon\n\
+	as you see the target, even if you're not\n\
+	sure of your response yet\n\
+	Press any key to continue."
+	error_message = "<span color='red'>X</span>"
+	
+	# Turn our OpenSesame variables into plain Python ones
+	operand1 = exp.get('operand1')
+	operation = exp.get('operation')
+	operand2 = exp.get('operand2')
+	result = exp.get('result')
+	problemType = exp.get('problemType')
+	
+	
+	
+	
+	# Get the size of the screen
+	mx = my_canvas.xcenter()
+	my = my_canvas.ycenter()
+	
+	# Some dimensions
+	# start button sized as in Dotan & Dehaene (2013)
+	start_w=0.0585*2*mx
+	start_h=0.052*2*my
+	
+	# Some empty lists for recording mouse data
+	xList, yList, tList = [], [], []
+	__end__
+
+define loop practiceBlock
+	set skip 0
+	set repeat 2
+	set order random
+	set offset no
+	set item experimentalSequence
+	set description "Repeatedly runs another item"
+	set cycles 36
+	set column_order "operand1;operation;operand2;result;problemType"
+	set break_if never
+	setcycle 0 operation "+"
+	setcycle 0 operand1 "2"
+	setcycle 0 result "2"
+	setcycle 0 problemType "target"
+	setcycle 0 operand2 "0"
+	setcycle 1 operation "-"
+	setcycle 1 operand1 "2"
+	setcycle 1 result "2"
+	setcycle 1 problemType "target"
+	setcycle 1 operand2 "0"
+	setcycle 2 operation "+"
+	setcycle 2 operand1 "3"
+	setcycle 2 result "3"
+	setcycle 2 problemType "target"
+	setcycle 2 operand2 "0"
+	setcycle 3 operation "-"
+	setcycle 3 operand1 "3"
+	setcycle 3 result "3"
+	setcycle 3 problemType "target"
+	setcycle 3 operand2 "0"
+	setcycle 4 operation "+"
+	setcycle 4 operand1 "4"
+	setcycle 4 result "4"
+	setcycle 4 problemType "target"
+	setcycle 4 operand2 "0"
+	setcycle 5 operation "+"
+	setcycle 5 operand1 "3"
+	setcycle 5 result "4"
+	setcycle 5 problemType "target"
+	setcycle 5 operand2 "1"
+	setcycle 6 operation "+"
+	setcycle 6 operand1 "2"
+	setcycle 6 result "4"
+	setcycle 6 problemType "target"
+	setcycle 6 operand2 "2"
+	setcycle 7 operation "-"
+	setcycle 7 operand1 "4"
+	setcycle 7 result "4"
+	setcycle 7 problemType "target"
+	setcycle 7 operand2 "0"
+	setcycle 8 operation "-"
+	setcycle 8 operand1 "5"
+	setcycle 8 result "4"
+	setcycle 8 problemType "target"
+	setcycle 8 operand2 "1"
+	setcycle 9 operation "-"
+	setcycle 9 operand1 "6"
+	setcycle 9 result "4"
+	setcycle 9 problemType "target"
+	setcycle 9 operand2 "2"
+	setcycle 10 operation "+"
+	setcycle 10 operand1 "6"
+	setcycle 10 result "6"
+	setcycle 10 problemType "target"
+	setcycle 10 operand2 "0"
+	setcycle 11 operation "+"
+	setcycle 11 operand1 "5"
+	setcycle 11 result "6"
+	setcycle 11 problemType "target"
+	setcycle 11 operand2 "1"
+	setcycle 12 operation "+"
+	setcycle 12 operand1 "4"
+	setcycle 12 result "6"
+	setcycle 12 problemType "target"
+	setcycle 12 operand2 "2"
+	setcycle 13 operation "-"
+	setcycle 13 operand1 "6"
+	setcycle 13 result "6"
+	setcycle 13 problemType "target"
+	setcycle 13 operand2 "0"
+	setcycle 14 operation "-"
+	setcycle 14 operand1 "7"
+	setcycle 14 result "6"
+	setcycle 14 problemType "target"
+	setcycle 14 operand2 "1"
+	setcycle 15 operation "-"
+	setcycle 15 operand1 "8"
+	setcycle 15 result "6"
+	setcycle 15 problemType "target"
+	setcycle 15 operand2 "2"
+	setcycle 16 operation "+"
+	setcycle 16 operand1 "7"
+	setcycle 16 result "7"
+	setcycle 16 problemType "target"
+	setcycle 16 operand2 "0"
+	setcycle 17 operation "-"
+	setcycle 17 operand1 "7"
+	setcycle 17 result "7"
+	setcycle 17 problemType "target"
+	setcycle 17 operand2 "0"
+	setcycle 18 operation "+"
+	setcycle 18 operand1 "8"
+	setcycle 18 result "8"
+	setcycle 18 problemType "target"
+	setcycle 18 operand2 "0"
+	setcycle 19 operation "-"
+	setcycle 19 operand1 "8"
+	setcycle 19 result "8"
+	setcycle 19 problemType "target"
+	setcycle 19 operand2 "0"
+	setcycle 20 operation "-"
+	setcycle 20 operand1 "5"
+	setcycle 20 result "1"
+	setcycle 20 problemType "filler"
+	setcycle 20 operand2 "4"
+	setcycle 21 operation "-"
+	setcycle 21 operand1 "6"
+	setcycle 21 result "1"
+	setcycle 21 problemType "filler"
+	setcycle 21 operand2 "5"
+	setcycle 22 operation "-"
+	setcycle 22 operand1 "6"
+	setcycle 22 result "2"
+	setcycle 22 problemType "filler"
+	setcycle 22 operand2 "4"
+	setcycle 23 operation "-"
+	setcycle 23 operand1 "7"
+	setcycle 23 result "2"
+	setcycle 23 problemType "filler"
+	setcycle 23 operand2 "5"
+	setcycle 24 operation "-"
+	setcycle 24 operand1 "7"
+	setcycle 24 result "3"
+	setcycle 24 problemType "filler"
+	setcycle 24 operand2 "4"
+	setcycle 25 operation "-"
+	setcycle 25 operand1 "8"
+	setcycle 25 result "3"
+	setcycle 25 problemType "filler"
+	setcycle 25 operand2 "5"
+	setcycle 26 operation "-"
+	setcycle 26 operand1 "7"
+	setcycle 26 result "4"
+	setcycle 26 problemType "filler"
+	setcycle 26 operand2 "3"
+	setcycle 27 operation "-"
+	setcycle 27 operand1 "8"
+	setcycle 27 result "4"
+	setcycle 27 problemType "filler"
+	setcycle 27 operand2 "4"
+	setcycle 28 operation "+"
+	setcycle 28 operand1 "3"
+	setcycle 28 result "6"
+	setcycle 28 problemType "filler"
+	setcycle 28 operand2 "3"
+	setcycle 29 operation "+"
+	setcycle 29 operand1 "2"
+	setcycle 29 result "6"
+	setcycle 29 problemType "filler"
+	setcycle 29 operand2 "4"
+	setcycle 30 operation "+"
+	setcycle 30 operand1 "3"
+	setcycle 30 result "7"
+	setcycle 30 problemType "filler"
+	setcycle 30 operand2 "4"
+	setcycle 31 operation "+"
+	setcycle 31 operand1 "2"
+	setcycle 31 result "7"
+	setcycle 31 problemType "filler"
+	setcycle 31 operand2 "5"
+	setcycle 32 operation "+"
+	setcycle 32 operand1 "4"
+	setcycle 32 result "8"
+	setcycle 32 problemType "filler"
+	setcycle 32 operand2 "4"
+	setcycle 33 operation "+"
+	setcycle 33 operand1 "3"
+	setcycle 33 result "8"
+	setcycle 33 problemType "filler"
+	setcycle 33 operand2 "5"
+	setcycle 34 operation "+"
+	setcycle 34 operand1 "5"
+	setcycle 34 result "9"
+	setcycle 34 problemType "filler"
+	setcycle 34 operand2 "4"
+	setcycle 35 operation "+"
+	setcycle 35 operand1 "4"
+	setcycle 35 result "9"
+	setcycle 35 problemType "filler"
+	setcycle 35 operand2 "5"
+	run experimentalSequence
 
 define inline_script setup_script
 	set description "Executes Python code"
