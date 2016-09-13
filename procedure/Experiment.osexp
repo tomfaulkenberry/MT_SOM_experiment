@@ -858,7 +858,7 @@ define sketchpad finish
 define sketchpad instruction1
 	set duration keypress
 	set description "Displays stimuli"
-	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=24 html=yes show_if=always text="In this experiment, you will be asked to answer several simple arithmetic problems.<br><br>At the beginning of each trial, you will see a fixation cross (+)<br> in the center of the screen along with a number line starting at 0 and ending at 10.<br><br>When you move your computer mouse upward,<br> an arithmetic problem will appear above the number line.<br /><br />As quickly and accurately as possible, <br> you will move your computer mouse to the approximate location <br> of the problem's answer on the number line.<br><br>To begin, we will do a few practice trials.<br><br>When you are ready to begin the practice trials, press any key." x=32.0 y=-32.0 z_index=0
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=24 html=yes show_if=always text="In this experiment, you will be asked to answer several simple arithmetic problems.<br><br>At the beginning of each trial, you will see a fixation cross (+)<br> in the center of the screen along with a number line starting at 0 and ending at 10.<br><br>When you move your computer mouse upward,<br> an arithmetic problem will appear above the number line.<br /><br />As quickly and accurately as possible, <br> you will move your computer mouse to the approximate location <br> of the problem's answer on the number line.<br><br>To begin, we will do a few practice trials.<br><br>When you are ready to begin the practice trials, press any key." x=32 y=-32 z_index=0
 
 define sketchpad instruction2
 	set duration keypress
@@ -1006,7 +1006,6 @@ define inline_script mousetracking_script
 	my_canvas.set_font(style='mono',size=60)
 	my_canvas.text('+')
 	number_line()
-	start_button()
 	my_canvas.show()
 	
 	# display problem above number line when mouse gets high enough on screen
@@ -1019,7 +1018,6 @@ define inline_script mousetracking_script
 			break
 	
 	number_line()
-	start_button()
 	
 	# problem
 	my_canvas.set_font(style='arial',size=60)
@@ -1147,7 +1145,6 @@ define inline_script mousetracking_script_1
 	my_canvas.set_font(style='mono',size=60)
 	my_canvas.text('+')
 	number_line()
-	start_button()
 	my_canvas.show()
 	
 	# display problem above number line when mouse gets high enough on screen
@@ -1160,7 +1157,6 @@ define inline_script mousetracking_script_1
 			break
 			
 	number_line()
-	start_button()
 	
 	# problem
 	my_canvas.set_font(style='arial',size=60)
@@ -1287,7 +1283,6 @@ define inline_script mousetracking_script_2
 	my_canvas.set_font(style='mono',size=60)
 	my_canvas.text('+')
 	number_line()
-	start_button()
 	my_canvas.show()
 	
 	# display problem above number line when mouse gets high enough on screen
@@ -1300,7 +1295,6 @@ define inline_script mousetracking_script_2
 			break
 			
 	number_line()
-	start_button()
 	
 	# problem
 	my_canvas.set_font(style='arial',size=60)
@@ -1427,7 +1421,6 @@ define inline_script mousetracking_script_3
 	my_canvas.set_font(style='mono',size=60)
 	my_canvas.text('+')
 	number_line()
-	start_button()
 	my_canvas.show()
 	
 	# display problem above number line when mouse gets high enough on screen
@@ -1440,7 +1433,6 @@ define inline_script mousetracking_script_3
 			break
 			
 	number_line()
-	start_button()
 	
 	# problem
 	my_canvas.set_font(style='arial',size=60)
@@ -1567,7 +1559,6 @@ define inline_script mousetracking_script_4
 	my_canvas.set_font(style='mono',size=60)
 	my_canvas.text('+')
 	number_line()
-	start_button()
 	my_canvas.show()
 	
 	# display problem above number line when mouse gets high enough on screen
@@ -1580,7 +1571,6 @@ define inline_script mousetracking_script_4
 			break
 	
 	number_line()
-	start_button()
 	
 	# problem
 	my_canvas.set_font(style='arial',size=60)
@@ -1673,7 +1663,7 @@ define inline_script mousetracking_script_4
 
 define loop practiceBlock
 	set skip 0
-	set repeat 2
+	set repeat 1
 	set order random
 	set offset no
 	set item experimentalSequence
