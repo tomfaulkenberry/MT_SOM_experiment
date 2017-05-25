@@ -15,6 +15,7 @@ dataRaw <- cbind(summaryMeasures,rawTrajectories[,1:151],xNorm,yNorm) # only wor
 length(dataRaw$rt[dataRaw$rt<3000])/length(dataRaw$rt)
 
 
+
 hist(dataRaw$rt)
 
 
@@ -158,7 +159,6 @@ basePlot+geom_segment(aes(x=0.1*width,y=0.89*height,xend=0.9*width,yend=0.89*hei
 data <- subset(dataRaw, subset=problemType=="target" & outlier==0 & operation=='+')
 
 # draw mean trajectories over each target answer (2, 3, 4, 6, 7, 8) SEPARATELY (just change target($result) for each graph)
-# for addition
 
 xCoords <- rep(0,202)
 yCoords <- rep(0,202)
