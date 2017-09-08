@@ -12,7 +12,7 @@ xNorm <- read.csv("nx.csv")
 yNorm <- read.csv("ny.csv")
 
 dataRaw <- cbind(summaryMeasures,rawTrajectories[,1:151],xNorm,yNorm) # only work with raw trajectories up to 3 seconds (captures 89.8% of trajectories)
-length(dataRaw$rt[dataRaw$rt<3000])/length(dataRaw$rt)
+#length(dataRaw$rt[dataRaw$rt<3000])/length(dataRaw$rt)
 
 
 
@@ -203,18 +203,30 @@ basePlot+geom_segment(aes(x=0.1*width,y=0.89*height,xend=0.9*width,yend=0.89*hei
 
 data <- subset(dataRaw, subset=problemType=="target" & outlier==0)
 
-agg=aggregate(error~subject_nr+operation+result,data=data,FUN="mean") # endpoint error performance data aggregated by subject
+# single factor (operation)
+agg=aggregate(endpoint~subject_nr+operation, data=data,FUN="mean")
+t.test(agg$endpoint[agg$operation=="+"],agg$endpoint[agg$operation=="-"],paired=TRUE)
 
-summary=summarySEwithin(agg,measurevar="error",withinvars=c("operation","result"),idvar="subject_nr")
+agg=aggregate(error~subject_nr+operation, data=data,FUN="mean")
+t.test(agg$error[agg$operation=="+"],agg$error[agg$operation=="-"],paired=TRUE)
 
-ggplot(summary,aes(x=result,y=error,shape=operation))+geom_line(aes(group=operation,linetype=operation))+geom_point(size=4)+labs(x="Target answer",y="Mean endpoint error")+theme(legend.title=element_text(face="bold",size=rel(1.3)),legend.text=element_text(size=rel(1.3)))+theme(axis.title=element_text(face="bold",size=rel(1.3)))+theme(axis.text.x=element_text(size=rel(1.3)))+theme(axis.text.y=element_text(size=rel(1.3)))+theme_classic(20)+theme(axis.line.x=element_line(color="black",size=0.5,linetype="solid"),axis.line.y=element_line(color="black",size=0.5,linetype="solid"))+geom_errorbar(width=0.1,aes(ymin=error-ci,ymax=error+ci)) 
 
 
-endpoint.aov=aov(error~as.factor(result)*as.factor(operation)+Error(as.factor(subject_nr)/(as.factor(result)*as.factor(operation))),data=agg)
+# factorial design (target x operation)
+agg=aggregate(endpoint~subject_nr+operation+result,data=data,FUN="mean") # endpoint error performance data aggregated by subject
+
+summary=summarySEwithin(agg,measurevar="endpoint",withinvars=c("operation","result"),idvar="subject_nr")
+
+ggplot(summary,aes(x=result,y=endpoint,shape=operation))+geom_line(aes(group=operation,linetype=operation))+geom_point(size=4)+labs(x="Target answer",y="Mean landing position")+theme(legend.title=element_text(face="bold",size=rel(1.3)),legend.text=element_text(size=rel(1.3)))+theme(axis.title=element_text(face="bold",size=rel(1.3)))+theme(axis.text.x=element_text(size=rel(1.3)))+theme(axis.text.y=element_text(size=rel(1.3)))+theme_classic(20)+theme(axis.line.x=element_line(color="black",size=0.5,linetype="solid"),axis.line.y=element_line(color="black",size=0.5,linetype="solid"))+geom_errorbar(width=0.1,aes(ymin=endpoint-ci,ymax=endpoint+ci)) 
+
+
+endpoint.aov=aov(endpoint~as.factor(result)*as.factor(operation)+Error(as.factor(subject_nr)/(as.factor(result)*as.factor(operation))),data=agg)
 summary(endpoint.aov)
 print(model.tables(endpoint.aov,"means"),digits=6)
 
 
+
+### don't do these for now...
 ##########
 ## regression analyses
 ##
